@@ -1,11 +1,17 @@
 import React from 'react'
 
-const ColorBox = ({search}) => {
+const ColorBox = ({search, hexValue, isDarkText}) => {
   return (
     <div 
         className='colorBox'
-        style= {{backgroundColor: ((search))}}
-    >{search ? search : 'Empty Value'}</div>
+        style= {{
+          backgroundColor: ((search)),
+          color: isDarkText ? "#000" : "#FFF"
+        }}
+    >
+    {search ? search : 'Empty Value'}<br/>
+    {hexValue ? hexValue: null}
+    </div>
   )
 }
 
